@@ -1,0 +1,57 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.scrollber-hidden::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.scrollber-hidden {
+  scrollbar-width: none;
+}
+
+.home-banner {
+  background: linear-gradient(
+    179.62deg,
+    rgba(174, 174, 174, 0.16) -107.81%,
+    rgba(255, 255, 255, 0) 96.6%
+  );
+}
+
+.social-icon svg path {
+  transition: all 1s;
+}
+.social-icon:hover.social-icon svg path {
+  fill: #c83204;
+}
+.dropdown-link:hover.dropdown-link svg path {
+  fill: #c83204;
+}
+
+.contact-border {
+  position: relative;
+}
+
+.contact-border::after {
+  content: "";
+  width: 100%;
+  left: 0;
+  position: absolute;
+  display: block;
+  bottom: 0;
+  border-bottom: 1px solid #E6E6E6;
+  z-index: -1;
+}
+
+.service-sidebar ::-webkit-resizer {
+  background: url("../images/svg/textarea.svg") no-repeat center;
+  height: 16px;
+  width: 16px;
+}
+
+
+.showDropdown.spin svg{
+  transform: rotate(-180deg);
+}

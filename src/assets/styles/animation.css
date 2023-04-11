@@ -1,0 +1,320 @@
+.img-border::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='260' ry='260' stroke='%23FDB29BFF' stroke-width='1' stroke-dasharray='6' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: rotate 40s linear infinite;
+}
+
+.img-border,
+.img-border img {
+  -webkit-backface-visibility: hidden;
+}
+
+.load-animation {
+  animation: rotate 2s linear infinite;
+}
+
+.load-more-btn:hover .load-animation {
+  animation-play-state: paused;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes changeBackgroundColor {
+  0% {
+    fill: #fc8b69;
+  }
+  50% {
+    fill: #fb6537;
+  }
+  100% {
+    fill: #fc8b69;
+  }
+}
+
+.light {
+  animation: changeBackgroundColor 3s infinite;
+}
+
+.line {
+  stroke-dasharray: 2;
+  animation: dash 5s linear infinite;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 100;
+  }
+}
+
+/* light-bar animation */
+.light-bar {
+  animation: animate_blink 1s infinite alternate;
+}
+.light-bar-1 {
+  animation-delay: 0s;
+}
+.light-bar-2 {
+  animation-delay: 0.2s;
+}
+.light-bar-3 {
+  animation-delay: 0.4s;
+}
+.light-bar-4 {
+  animation-delay: 0.6s;
+}
+.light-bar-5 {
+  animation-delay: 0.8s;
+}
+.light-bar-6 {
+  animation-delay: 1s;
+}
+
+@keyframes animate_blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes float1 {
+	0% {
+		transform: translateY(0%);
+	}
+	50% {
+		transform: translateY(-5%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
+@keyframes float2 {
+  0% {
+    transform: translateY(-5%);
+	}
+	50% {
+    transform: translateY(0%);
+	}
+	100% {
+    transform: translateY(-5%);
+	}
+}
+
+@keyframes float3 {
+  0% {
+    transform: translateY(0%);
+  }
+  35% {
+    transform: translateY(-8%);
+  }
+  80% {
+    transform: translateY(4%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.float-1{
+  animation: float1 6s ease-in-out infinite;
+}
+.float-2{
+  animation: float2 6s ease-in-out infinite;
+}
+.float-3{
+  animation: float3 6s linear infinite;
+  animation-delay: 2s;
+}
+
+@keyframes antena_color {
+  0% {
+    fill: #C83204;
+  }
+  40% {
+    fill: #FB6537;
+  }
+  80% {
+    fill: #962503;
+  }
+  100% {
+    fill: #C83204;
+  }
+}
+.antena {
+  animation: antena_color 1s infinite;
+}
+
+@keyframes number_color {
+  0% {
+    fill: #FC7D56;
+  }
+  50% {
+    fill: #FDB29B;
+  }
+  100% {
+    fill: #FC7D56;
+  }
+}
+.number-color {
+  animation: number_color 7s infinite;
+}
+
+@keyframes running_animation {
+  0%{
+    transform: translateX(-2%);
+  }
+  100% {
+    transform: translateX(5%) ;
+  }
+}
+
+.running-line{
+  animation: running_animation 1.5s linear infinite;
+}
+
+@keyframes arrow_animation {
+  0% {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+  25% {
+    opacity: 0;
+    transform: translateX(10px) scale(0.9);
+  }
+  26% {
+    opacity: 0;
+    transform: translateX(-10px) scale(0.9);
+  }
+  55% {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+}
+
+.arrow-animation {
+  animation: arrow_animation 2s linear infinite;
+}
+
+.arrow-2.arrow-animation {
+  animation-delay: 0.2s;
+}
+
+.service-card:hover .arrow-animation-single,
+.case-study-card:hover .arrow-animation-single,
+.notFound_page .arrow-animation-single,
+.blog-card:hover .arrow-animation-single {
+  animation: arrow_animation 1s linear infinite;
+}
+
+/* shaking animation start */
+@keyframes tilt-shaking {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(0eg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.swiper-slide-active .quote-animation {
+  animation: tilt-shaking 0.5s linear infinite;
+}
+/* shaking animation end */
+
+
+/* speciality image animation start */
+@keyframes dance1 {
+  0%{
+    @apply top-[15%] left-[20%] z-10;
+  }
+  25%{
+    @apply top-[0%] left-[0%];
+  }
+  50%{
+    @apply top-[0%] left-[20%] z-0;
+  }
+  75%{
+    @apply top-[15%] left-[0%];
+  }
+  100%{
+    @apply top-[15%] left-[20%] z-10;
+  }
+}
+.img-1{
+  animation: dance1 8s linear infinite;
+}
+
+@keyframes dance2 {
+  0%{
+    @apply top-[0%] left-[0%] z-0;
+  }
+  25%{
+    @apply top-[15%] left-[20%];
+  }
+  50%{
+    @apply top-[15%] left-[0%] z-10;
+  }
+  75%{
+    @apply top-[0%] left-[20%];
+  }
+  100%{
+    @apply top-[0%] left-[0%] z-0;
+  }
+}
+.img-2{
+  animation: dance2 8s linear infinite;
+}
+/* speciality image animation end */
+
+
+@keyframes color_animation {
+  50%{
+    @apply bg-primary-100/80;
+  }
+}
+.contact-us-card{
+  animation: color_animation 5s infinite;
+}
+
+/* hover underline */
+.hover-underline-animation {
+  @apply relative
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -1px;
+  left: 0;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+  @apply bg-primary-600
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
