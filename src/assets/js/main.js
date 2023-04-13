@@ -104,3 +104,31 @@ $(".toggle").click(function (e) {
   $this.parent().parent().find(".toggle").removeClass("spin");
   $this.addClass("spin");
 });
+
+// countdown timer
+(function () {
+  const interval = setInterval(() => {
+    const now = new Date();
+    const oneYearFromNow = new Date(
+      now.getFullYear() + 1,
+      now.getMonth(),
+      now.getDate()
+    );
+
+    const totalSeconds = Math.floor((oneYearFromNow - now) / 1000);
+    const days = Math.floor(totalSeconds / (3600 * 24));
+    const hours = Math.floor((totalSeconds % (3600 * 24)) / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = Math.floor(totalSeconds % 60);
+
+    document.getElementById("days").innerText = days < 10 ? "0" + days : days;
+    document.getElementById("hours").innerText =
+      hours < 10 ? "0" + hours : hours;
+    document.getElementById("minutes").innerText =
+      minutes < 10 ? "0" + minutes : minutes;
+    document.getElementById("seconds").innerText =
+      seconds < 10 ? "0" + seconds : seconds;
+  }, 1000);
+
+  return () => clearInterval(interval);
+})();
