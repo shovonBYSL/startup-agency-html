@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .img-border::after {
   content: "";
   height: 100%;
@@ -296,9 +300,9 @@
   animation: color_animation 5s infinite;
 }
 
-/* hover underline */
+  /* hover underline */
 .hover-underline-animation {
-  @apply relative
+  @apply relative;
 }
 
 .hover-underline-animation::after {
