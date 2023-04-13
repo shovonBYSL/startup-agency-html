@@ -51,7 +51,8 @@ body{
   width: 16px;
 }
 
-.showDropdown.spin svg{
+.showDropdown.spin svg,
+.toggle.spin svg{
   transform: rotate(-180deg);
 }
 
