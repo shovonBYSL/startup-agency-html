@@ -45,12 +45,6 @@ body{
   z-index: -1;
 }
 
-.service-sidebar ::-webkit-resizer {
-  background: url("../images/svg/textarea.svg") no-repeat center;
-  height: 16px;
-  width: 16px;
-}
-
 .showDropdown.spin svg,
 .toggle.spin svg{
   transform: rotate(-180deg);
